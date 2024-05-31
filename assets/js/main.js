@@ -255,6 +255,15 @@
     })
   });
 
+
+  document.getElementById("togglePortfolio").addEventListener("click", function() {
+    var portfolioSection = document.getElementById("portfolioSection");
+    portfolioSection.classList.toggle("show");
+    var buttonText = document.getElementById("togglePortfolio").textContent;
+    document.getElementById("togglePortfolio").textContent = (buttonText === "Show Portfolio") ? "Hide Portfolio" : "Show Portfolio";
+  });
+
+
   /**
    * Initiate Pure Counter 
    */

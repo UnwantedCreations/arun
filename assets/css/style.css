@@ -634,6 +634,32 @@ section {
   bottom: 0;
 }
 
+
+
+#togglePortfolio {
+  padding: 10px 20px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#togglePortfolio:hover {
+  background-color: #ff2b23;
+}
+
+.portfolio-section {
+  overflow: hidden;
+  transition: height 0.3s ease;
+  height: 0;
+}
+
+.portfolio-section.show {
+  height: auto; /* Set height to auto to reveal the content */
+}
+
+
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
