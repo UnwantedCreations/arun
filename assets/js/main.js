@@ -270,7 +270,7 @@
       document.getElementById("togglePortfolio").textContent = "Show Portfolio";
     }
   });
-
+  document.addEventListener('contextmenu', event => event.preventDefault());
 
   /**
    * Initiate Pure Counter 
