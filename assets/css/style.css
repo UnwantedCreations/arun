@@ -627,14 +627,14 @@ section {
 
 #togglePortfolio {
   padding: 10px 20px;
-  background-color: #ff0000;
+  background-color: #007bff;;
   color: #fff;
   border: none;
   cursor: pointer;
 }
 
 #togglePortfolio:hover {
-  background-color: #ff2b23;
+  background-color: #0056b3;
 }
 
 .portfolio-section {
@@ -1116,6 +1116,7 @@ section {
   text-align: center;
   font-size: 13px;
   color: #eaebf0;
+  text-decoration: underline;
 }
 
 @media (max-width: 1199px) {
