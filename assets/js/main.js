@@ -259,17 +259,28 @@
   document.getElementById("togglePortfolio").addEventListener("click", function() {
     var portfolioSection = document.getElementById("portfolioSection");
     var buttonText = document.getElementById("togglePortfolio").textContent;
-  
-    if (buttonText === "Show Portfolio") {
-      portfolioSection.classList.add("show");
-      document.getElementById("togglePortfolio").classList.add("hoverEffect");
-      document.getElementById("togglePortfolio").textContent = "Hide Portfolio";
-    } else {
-      portfolioSection.classList.remove("show");
-      document.getElementById("togglePortfolio").classList.remove("hoverEffect");
-      document.getElementById("togglePortfolio").textContent = "Show Portfolio";
+    var imagesLoaded = portfolioSection.classList.contains("images-loaded");
+
+    if (!imagesLoaded) {
+        var images = document.querySelectorAll("#portfolioSection .portfolio-item img");
+        images.forEach(function(img) {
+            var src = img.getAttribute("data-src");
+            img.setAttribute("src", src);
+        });
+
+        portfolioSection.classList.add("images-loaded");
     }
-  });
+    if (buttonText === "Show Portfolio") {
+        portfolioSection.classList.add("show");
+        document.getElementById("togglePortfolio").classList.add("hoverEffect");
+        document.getElementById("togglePortfolio").textContent = "Hide Portfolio";
+    } else {
+        portfolioSection.classList.remove("show");
+        document.getElementById("togglePortfolio").classList.remove("hoverEffect");
+        document.getElementById("togglePortfolio").textContent = "Show Portfolio";
+    }
+});
+
   document.addEventListener('contextmenu', event => event.preventDefault());
 
   /**
