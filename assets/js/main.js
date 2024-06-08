@@ -258,9 +258,17 @@
 
   document.getElementById("togglePortfolio").addEventListener("click", function() {
     var portfolioSection = document.getElementById("portfolioSection");
-    portfolioSection.classList.toggle("show");
     var buttonText = document.getElementById("togglePortfolio").textContent;
-    document.getElementById("togglePortfolio").textContent = (buttonText === "Show Portfolio") ? "Hide Portfolio" : "Show Portfolio";
+  
+    if (buttonText === "Show Portfolio") {
+      portfolioSection.classList.add("show");
+      document.getElementById("togglePortfolio").classList.add("hoverEffect");
+      document.getElementById("togglePortfolio").textContent = "Hide Portfolio";
+    } else {
+      portfolioSection.classList.remove("show");
+      document.getElementById("togglePortfolio").classList.remove("hoverEffect");
+      document.getElementById("togglePortfolio").textContent = "Show Portfolio";
+    }
   });
 
 
