@@ -637,8 +637,34 @@ section {
   position: relative;
   overflow: hidden;
   z-index: 1;
-  box-shadow: 6px 6px 12px #f9f047, -6px -6px 12px #0fd850;
+  box-shadow: 6px 6px 12px #0fd850, -6px -6px 12px #f9f047;
+  animation: rotateShadow 4s infinite linear;
 }
+
+@keyframes rotateShadow {
+  0% {
+    box-shadow: 6px 6px 12px #0fd850, -6px -6px 12px #f9f047;
+  }
+  16.6% {
+    box-shadow: 6px -6px 12px #ff5733, -6px 6px 12px #33ff57;
+  }
+  33.3% {
+    box-shadow: -6px -6px 12px #3357ff, 6px 6px 12px #ff33a1;
+  }
+  50% {
+    box-shadow: -6px 6px 12px #ff5733, 6px -6px 12px #33ff57;
+  }
+  66.6% {
+    box-shadow: 6px -6px 12px #3357ff, -6px 6px 12px #ff33a1;
+  }
+  83.3% {
+    box-shadow: -6px -6px 12px #0fd850, 6px 6px 12px #f9f047;
+  }
+  100% {
+    box-shadow: 6px 6px 12px #0fd850, -6px -6px 12px #f9f047;
+  }
+}
+
 
 #togglePortfolio::before {
   content: '';
