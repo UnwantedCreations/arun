@@ -629,13 +629,15 @@ section {
   width: 9em;
   height: 3em;
   border-radius: 30em;
-  font-size: 15px;
+  font-size: 14px;
+  font-weight: bold;
   font-family: inherit;
   border: none;
+  background: #ffffff;
   position: relative;
   overflow: hidden;
   z-index: 1;
-  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  box-shadow: 6px 6px 12px #f9f047, -6px -6px 12px #0fd850;
 }
 
 #togglePortfolio::before {
@@ -663,7 +665,7 @@ section {
 }
 
 .portfolio-section.show {
-  height: auto; /* Set height to auto to reveal the content */
+  height: auto;
 }
 
 
