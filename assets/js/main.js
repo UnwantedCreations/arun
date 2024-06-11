@@ -256,7 +256,7 @@
     if (!imagesLoaded) {
         var images = document.querySelectorAll("#portfolioSection .portfolio-item img");
         images.forEach(function(img) {
-            var src = img.getAttribute("data-src");
+            var src = img.getAttribute("src");
             img.setAttribute("src", src);
         });
 
